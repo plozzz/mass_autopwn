@@ -8,6 +8,7 @@
 5. Reverse Shell
 
 ## Scenarios :
+```
 SI branche a un pc ALORS
   1. poison tap
   5. Reverse Shell
@@ -19,7 +20,7 @@ SINON
     4. Clone carte MiFare
   SINON
     3. clonage equipement Bluethoot
-
+```
 
 
 ## Installation :
@@ -30,6 +31,7 @@ Systeme : raspbian
 Mise a jour :
 sudo apt update
 sudo apt upgrade
+sudo apt install git vim 
 
 changement du mdp par defaut :
 sudo passwd pi
