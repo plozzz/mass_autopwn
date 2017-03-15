@@ -51,11 +51,6 @@ sudo wpa_cli reconfigure
 
 
 
-
-
-
-
-
 POISON TAP
 ==========
 
@@ -66,7 +61,7 @@ https://samy.pl/poisontap/
 GIT :
 -----
 https://github.com/samyk/poisontap
-
+https://github.com/wismna/HackPi
 
 
 MASS-PWNING
@@ -82,7 +77,6 @@ GIT :
 -----
 https://github.com/virtualabs/probeZero
 https://github.com/DigitalSecurity/mockle
-https://github.com/wismna/HackPi
 
 
 KEYSWEEPER
