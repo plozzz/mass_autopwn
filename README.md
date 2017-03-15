@@ -3,7 +3,7 @@
 ## Vecteurs d'attaque:
 1. USB via emulation Ethernet (PoisonTap)
 2. Wifi avec crack auto des cles (wifite custom)
-3. Clonage des equipements Bluethoot
+3. Clonage des equipements Bluetooth
 4. Clone carte MiFare
 5. Reverse Shell
 
@@ -19,7 +19,7 @@ SINON
   SI carte MiFare ALORS
     4. Clone carte MiFare
   SINON
-    3. clonage equipement Bluethoot
+    3. clonage equipement Bluetooth
 ```
 
 
