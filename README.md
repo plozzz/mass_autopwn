@@ -3,7 +3,7 @@
 ## Vecteurs d'attaque:
 1. USB via emulation Ethernet (PoisonTap)
 2. Wifi avec crack auto des cles (wifite custom)
-3. Clonage des equipements Bluethoot
+3. Clonage des equipements Bluetooth
 4. Clone carte MiFare
 5. Reverse Shell
 
@@ -19,7 +19,7 @@ SINON
   SI carte MiFare ALORS
     4. Clone carte MiFare
   SINON
-    3. clonage equipement Bluethoot
+    3. clonage equipement Bluetooth
 ```
 
 
@@ -51,11 +51,6 @@ sudo wpa_cli reconfigure
 
 
 
-
-
-
-
-
 POISON TAP
 ==========
 
@@ -66,7 +61,7 @@ https://samy.pl/poisontap/
 GIT :
 -----
 https://github.com/samyk/poisontap
-
+https://github.com/wismna/HackPi
 
 
 MASS-PWNING
@@ -82,7 +77,6 @@ GIT :
 -----
 https://github.com/virtualabs/probeZero
 https://github.com/DigitalSecurity/mockle
-https://github.com/wismna/HackPi
 
 
 KEYSWEEPER
