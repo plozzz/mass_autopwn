@@ -5,7 +5,7 @@
 2. Wifi avec crack auto des cles (wifite custom)
 3. Clonage des equipements Bluetooth
 4. Clone carte MiFare
-5. Reverse Shell
+5. Reverse Shell (over SSL & DNS)
 
 ## Scenarios :
 ```
@@ -62,7 +62,7 @@ GIT :
 -----
 https://github.com/samyk/poisontap
 https://github.com/wismna/HackPi
-
+https://github.com/pLesur/PoistonTapContainer
 
 MASS-PWNING
 ===========
