@@ -1,2 +1,0 @@
-# ROGUE AP
-
