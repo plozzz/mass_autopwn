@@ -1,0 +1,8 @@
+MASS_AUTOPWN_DIR="/home/pi/mass_autopwn/"
+
+# Load ethernet module
+# MODULE=g_ether
+# Load serial modiule
+# MODULE=g_serial
+# Combines g_ether, g_serial, g_mass_storage into a single module
+MODULE=g_multi
