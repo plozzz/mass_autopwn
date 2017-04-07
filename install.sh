@@ -50,36 +50,24 @@ function backup {
 	mkdir -p $MASS_AUTOPWN_DIR"/backup/"
 	cp /boot/config.txt $MASS_AUTOPWN_DIR"backup/"
 	cp /etc/modules $MASS_AUTOPWN_DIR"backup/"
-	cp /etc/network/interfaces $MASS_AUTOPWN_DIR"backup/"
-	cp /etc/network/interfaces $MASS_AUTOPWN_DIR"backup/"
+	cp /etc/rc.local $MASS_AUTOPWN_DIR"backup/"
 }
 
 function restore {
 	cp $MASS_AUTOPWN_DIR"backup/config.txt" /boot/config.txt
 	cp $MASS_AUTOPWN_DIR"backup/modules" /etc/modules
-	rm /etc/network/interfaces.d/massautopwn
-	cp $MASS_AUTOPWN_DIR"backup/interfaces" /etc/network/interfaces
+	rm -f /etc/network/interfaces.d/massautopwn
 }
 
 function init_modules {
 	echo "dtoverlay=dwc2" | tee -a /boot/config.txt
 	echo "dwc2" | tee -a /etc/modules
-
-# Allows you to configure 2 from Ethernet, Mass storage and Serial
-# In addition to the above modules, a few other (less useful) modules are included.
-# You can only pick one of the above modules to use at a time
-	echo $MODULE | tee -a /etc/modules
-
-	echo "options g_multi file=/dev/mmcblk0p4 stall=0 host_addr=36:0b:5c:23:ce:31" | tee -a /etc/modprobe.d/multigadget.conf
+	echo "g_multi" | sudo tee -a /etc/modules
+	echo "libcomposite" | sudo tee -a /etc/modules
 }
 
 function init_network {
-	echo "auto usb0" | tee -a /etc/network/interfaces.d/massautopwn
-	echo -e "iface usb0 inet static" | tee -a /etc/network/interfaces.d/massautopwn
-	echo -e "\taddress 10.0.0.42" | tee -a /etc/network/interfaces.d/massautopwn
-	echo -e "\tnetmask 255.255.255.0" | tee -a /etc/network/interfaces.d/massautopwn
-
-	echo "source /etc/network/interfaces.d/*" | tee -a /etc/network/interfaces
+	cp $MASS_AUTOPWN_DIR"interfaces" /etc/network/interfaces.d/massautopwn
 }
 
 function init {
@@ -113,7 +101,9 @@ function main {
 		restore
 		echo "Restore finish"
 	else
-		install_dep
+		if [ $INSTALL_DEP ]; then
+			install_dep
+		fi
 		load_config
 		#backup
 		#init

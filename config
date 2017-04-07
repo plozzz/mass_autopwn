@@ -1,3 +1,5 @@
+UPDATE=false
+
 MASS_AUTOPWN_DIR="/home/pi/mass_autopwn/"
 
 # Load ethernet module
