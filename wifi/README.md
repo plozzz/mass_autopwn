@@ -11,7 +11,7 @@ apt install aircrack-ng reaver tshark pyrit build-essential libssl-dev libpcap0.
 
 wget http://www.willhackforsushi.com/code/cowpatty/4.6/cowpatty-4.6.tgz
 tar xf cowpatty-4.6.tgz
-cd cowpatty-4./6
+cd cowpatty-4.6
 git checkout debian/4.6-1kali3
 make
 sudo cp cowpatty /usr/bin
